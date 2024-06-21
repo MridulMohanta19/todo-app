@@ -12,7 +12,7 @@ function App() {
   const [currentEditedItem, setCurrentEditedItem] = useState({ title: "", description: "" });
 
   const fetchTodos = async () => {
-    const response = await fetch('http://localhost:3001/tasks');
+    const response = await fetch('https://todo-backend-wl6b.onrender.com/tasks');
     const data = await response.json();
     setTodos(data.filter(task => !task.completedOn));
     setCompletedTodos(data.filter(task => task.completedOn));
@@ -23,12 +23,16 @@ function App() {
   }, []);
 
   const handleAddTodo = async () => {
+    if (!Title || !Description) {
+      alert('Please fill in all fields');
+      return;
+    }
     const newTodoItem = {
       title: Title,
       description: Description,
     };
 
-    const response = await fetch('http://localhost:3001/tasks', {
+    const response = await fetch('https://todo-backend-wl6b.onrender.com/tasks', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -43,7 +47,7 @@ function App() {
   };
 
   const handleDeleteTodo = async (id) => {
-    await fetch(`http://localhost:3001/tasks/${id}`, {
+    await fetch(`https://todo-backend-wl6b.onrender.com/tasks/${id}`, {
       method: 'DELETE',
     });
 
@@ -63,7 +67,7 @@ function App() {
     const taskToUpdate = allTodos.find(todo => todo.id === id);
     const updatedTask = { ...taskToUpdate, completedOn };
 
-    await fetch(`http://localhost:3001/tasks/${id}`, {
+    await fetch(`https://todo-backend-wl6b.onrender.com/tasks/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -75,7 +79,7 @@ function App() {
   };
 
   const handleDeleteCompletedTodo = async (id) => {
-    await fetch(`http://localhost:3001/tasks/${id}`, {
+    await fetch(`https://todo-backend-wl6b.onrender.com/tasks/${id}`, {
       method: 'DELETE',
     });
 
@@ -97,7 +101,7 @@ function App() {
 
   const handleSaveEdit = async () => {
     const updatedTask = currentEditedItem;
-    await fetch(`http://localhost:3001/tasks/${updatedTask.id}`, {
+    await fetch(`https://todo-backend-wl6b.onrender.com/tasks/${updatedTask.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
