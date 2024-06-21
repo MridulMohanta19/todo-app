@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+Sure! Below is a proper `README.md` file for the frontend part of your project.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```markdown
+# To-Do List Application Frontend
 
-## Available Scripts
+This is the frontend application for a To-Do List, built with React. It allows users to create, read, update, and delete tasks. Tasks can also be marked as completed, and users can switch between viewing active tasks and completed tasks.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Add new tasks with a title and description.
+- View all active tasks.
+- Mark tasks as completed.
+- View all completed tasks.
+- Edit existing tasks.
+- Delete tasks.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React
+- JavaScript
+- HTML
+- CSS
+- [React Icons](https://react-icons.github.io/react-icons/) (for icons)
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You will need to have the following software installed on your machine:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js (v12 or higher)
+- npm (v6 or higher)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/todo-list-frontend.git
+   cd todo-list-frontend
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Start the development server**:
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   This will start the development server and open the application in your default web browser. If it doesn't open automatically, you can visit [http://localhost:3000](http://localhost:3000) to view the app.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Usage
 
-## Learn More
+1. **Add a new task**:
+   - Enter a title and description for the task in the input fields.
+   - Click the "Add" button to add the task to the list.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **View tasks**:
+   - By default, the app shows all active tasks.
+   - Click the "Completed" button to view completed tasks.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. **Mark a task as completed**:
+   - Click the check icon next to the task you want to mark as completed.
 
-### Code Splitting
+4. **Edit a task**:
+   - Click the edit icon next to the task you want to edit.
+   - Update the title and/or description in the input fields that appear.
+   - Click the "Save" button to save the changes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+5. **Delete a task**:
+   - Click the delete icon next to the task you want to delete.
 
-### Analyzing the Bundle Size
+## Code Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `src/App.js`: The main component containing the logic and rendering for the To-Do list.
+- `src/App.css`: The CSS file for styling the components.
 
-### Making a Progressive Web App
+## Backend Integration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This frontend application is designed to work with a Node.js backend that provides a RESTful API for managing tasks. Ensure that the backend server is running and accessible at `http://localhost:3000`.
 
-### Advanced Configuration
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+If you would like to contribute to this project, please follow these steps:
 
-### Deployment
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -am 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Create a new Pull Request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
 
-### `npm run build` fails to minify
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgments
+
+- [React Icons](https://react-icons.github.io/react-icons/) for providing the icons used in the application.
+
+---
+
+Feel free to reach out if you have any questions or need further assistance!
+```
+
+Make sure to update the repository URL in the installation section to match your actual repository URL. Additionally, you might want to add more specific details or sections based on your project needs.
