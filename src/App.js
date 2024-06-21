@@ -14,8 +14,8 @@ function App() {
   const fetchTodos = async () => {
     const response = await fetch('https://todo-backend-wl6b.onrender.com/tasks');
     const data = await response.json();
-    setTodos(data.filter(task => !task.completedOn));
-    setCompletedTodos(data.filter(task => task.completedOn));
+    setTodos(data?.filter(task => !task.completedOn));
+    setCompletedTodos(data?.filter(task => task.completedOn));
   };
 
   useEffect(() => {
